@@ -1,0 +1,18 @@
+{
+    "name": "ciaranmcnulty/gha-docker-caching",
+    "require": {
+        "brick/math": "^0.11.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ciaranmcnulty\\GhaDockerCaching\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ciaran McNulty",
+            "email": "mail@ciaranmcnulty.com"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+services:
+  php:
+    image: "ciaranmcnulty/gha-docker-caching"
+    build:
+      context: "."
+      x-bake:
+        cache-to:
+          - "type=gha,scope=php,mode=max"
+        cache-from:
+            - "type=gha,scope=php"
