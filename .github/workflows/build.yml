@@ -14,7 +14,9 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build
-        run: docker buildx bake --load
+        run: |
+          docker buildx bake --print
+          docker buildx bake --load
 
       - name: Check
         run: docker compose run php
