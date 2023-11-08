@@ -17,9 +17,7 @@ jobs:
         uses: crazy-max/ghaction-github-runtime@v3
 
       - name: Build
-        run: |
-          docker buildx bake --print
-          docker buildx bake --load
+        run: make build-images
 
       - name: Check
         run: docker compose run php
