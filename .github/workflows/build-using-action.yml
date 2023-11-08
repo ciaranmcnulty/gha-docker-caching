@@ -1,0 +1,22 @@
+name: Build using action
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build
+        uses: docker/bake-action@v4
+        with:
+          load: true
+
+      - name: Check
+        run: docker compose run php
