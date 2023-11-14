@@ -20,4 +20,4 @@ jobs:
         run: make build-images
 
       - name: Check
-        run: docker compose run php
+        run: make check
