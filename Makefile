@@ -1,6 +1,6 @@
 build-images:
-	docker buildx bake --print
-	docker buildx bake --load
+	docker compose config
+	docker compose build
 
 check:
 	docker compose run php
